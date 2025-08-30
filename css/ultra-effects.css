@@ -1,0 +1,535 @@
+/* ========== ULTRA MODERN EFFECTS 2025 - BRIGHTNESS FIXED ========== */
+
+/* ========== 1. MORPHING & LIQUID EFFECTS - FIXED ========== */
+.morphing-blob {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, #00ffff, #ff00ff, #00ff88);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: morphing 8s ease-in-out infinite;
+    filter: blur(8px);
+    opacity: 0.15;
+    z-index: -1;
+}
+
+@keyframes morphing {
+    0%, 100% { 
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        transform: rotate(0deg) scale(1);
+    }
+    25% { 
+        border-radius: 58% 42% 75% 25% / 76% 24% 76% 24%;
+        transform: rotate(90deg) scale(1.1);
+    }
+    50% { 
+        border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+        transform: rotate(180deg) scale(0.9);
+    }
+    75% { 
+        border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+        transform: rotate(270deg) scale(1.05);
+    }
+}
+
+/* ========== 2. WAVE DISTORTION EFFECTS - FIXED ========== */
+.wave-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.wave-distortion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+        rgba(0,255,255,0.03) 0%, 
+        rgba(255,0,255,0.03) 100%
+    );
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+    animation: waveMove 6s ease-in-out infinite;
+}
+
+@keyframes waveMove {
+    0%, 100% { 
+        clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%); 
+    }
+    25% { 
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%); 
+    }
+    50% { 
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 95%); 
+    }
+    75% { 
+        clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 90%); 
+    }
+}
+
+/* ========== 3. MAGNETIC HOVER EFFECTS ========== */
+.magnetic {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-style: preserve-3d;
+}
+
+.magnetic:hover {
+    transform: translateZ(15px);
+}
+
+/* ========== 4. GLASSMORPHISM EFFECTS - FIXED ========== */
+.glass-card {
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 255, 255, 0.15);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    background: rgba(0, 0, 0, 0.85) !important;
+    transform: translateY(-5px);
+    box-shadow: 
+        0 15px 35px rgba(0, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* ========== 5. NEON GLOW EFFECTS - FIXED ========== */
+.neon-text {
+    color: #00ffff !important;
+    text-shadow: 
+        0 0 2px rgba(0, 255, 255, 0.8),
+        0 0 4px rgba(0, 255, 255, 0.4),
+        0 0 8px rgba(0, 255, 255, 0.2);
+    animation: neonFlickerSoft 3s infinite alternate;
+    filter: brightness(0.85) saturate(1.1);
+}
+
+@keyframes neonFlickerSoft {
+    0%, 100% {
+        text-shadow: 
+            0 0 2px rgba(0, 255, 255, 0.8),
+            0 0 4px rgba(0, 255, 255, 0.4),
+            0 0 8px rgba(0, 255, 255, 0.2);
+    }
+    50% {
+        text-shadow: 
+            0 0 3px rgba(0, 255, 255, 0.9),
+            0 0 6px rgba(0, 255, 255, 0.5),
+            0 0 12px rgba(0, 255, 255, 0.3);
+    }
+}
+
+/* ========== 6. ENHANCED ICON VISIBILITY - FIXED ========== */
+.social-link i,
+.btn-cyber i,
+.stat-icon i,
+.contact-method i,
+.nav-logo,
+.profile-placeholder i,
+.footer .social-link i {
+    color: #00ffff !important;
+    filter: 
+        brightness(1.3) 
+        contrast(1.4) 
+        drop-shadow(0 0 4px rgba(0, 255, 255, 0.6)) !important;
+    text-shadow: 
+        0 0 3px rgba(0, 255, 255, 0.8),
+        0 0 6px rgba(0, 255, 255, 0.4);
+}
+
+/* ========== 7. FLOATING ELEMENTS ========== */
+.floating {
+    animation: floating 4s ease-in-out infinite;
+}
+
+.floating:nth-child(odd) {
+    animation-delay: 2s;
+}
+
+@keyframes floating {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+    }
+    33% { 
+        transform: translateY(-15px) rotate(1deg); 
+    }
+    66% { 
+        transform: translateY(-8px) rotate(-0.5deg); 
+    }
+}
+
+/* ========== 8. PERSPECTIVE TILT CARDS - FIXED ========== */
+.tilt-card {
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.tilt-card:hover {
+    transform: perspective(1000px) rotateX(3deg) rotateY(3deg);
+}
+
+.tilt-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 255, 0.02) 0%, 
+        rgba(255, 255, 255, 0.01) 50%,
+        transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+.tilt-card:hover::before {
+    opacity: 1;
+}
+
+/* ========== 9. PULSE ANIMATION - FIXED ========== */
+.pulse-ring {
+    position: absolute;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: pulseRing 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+@keyframes pulseRing {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+.pulse-dot {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: #00ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.4));
+}
+
+.pulse-dot::before,
+.pulse-dot::after {
+    content: '';
+    position: absolute;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    animation: pulseRing 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+.pulse-dot::after {
+    animation-delay: 0.8s;
+}
+
+/* ========== 10. SCROLL REVEAL EFFECTS ========== */
+.reveal-slide-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-fade-in {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s ease-out;
+}
+
+.reveal-fade-in.visible {
+    opacity: 1;
+    filter: blur(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.reveal-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ========== 11. LOADING SKELETON EFFECTS ========== */
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.03) 25%,
+        rgba(255, 255, 255, 0.06) 50%,
+        rgba(255, 255, 255, 0.03) 75%
+    );
+    background-size: 200% 100%;
+    animation: skeletonLoading 2s infinite;
+    border-radius: 4px;
+}
+
+@keyframes skeletonLoading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ========== 12. TYPEWRITER EFFECT ========== */
+.typewriter {
+    overflow: hidden;
+    border-right: 2px solid #00ffff;
+    white-space: nowrap;
+    animation: typewriter 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #00ffff; }
+}
+
+/* ========== 13. BUTTON IMPROVEMENTS - FIXED ========== */
+.btn-cyber {
+    position: relative;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.btn-cyber::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-cyber:hover::before {
+    left: 100%;
+}
+
+.btn-cyber.btn-primary {
+    background: linear-gradient(135deg, #00ffff 0%, #ff00ff 100%) !important;
+    color: #000 !important;
+    border-color: transparent !important;
+    font-weight: 700;
+    filter: brightness(0.9) saturate(1.1);
+    box-shadow: 
+        0 4px 15px rgba(0, 255, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.btn-cyber.btn-primary:hover {
+    filter: brightness(1.1) saturate(1.2);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 25px rgba(0, 255, 255, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-cyber.btn-primary i {
+    color: #000 !important;
+    text-shadow: none !important;
+    filter: brightness(1) contrast(1) !important;
+}
+
+.btn-cyber.btn-secondary {
+    border-color: rgba(255, 0, 255, 0.5) !important;
+    color: #ff00ff !important;
+    background: rgba(255, 0, 255, 0.03) !important;
+}
+
+.btn-cyber.btn-secondary:hover {
+    background: rgba(255, 0, 255, 0.08) !important;
+    border-color: rgba(255, 0, 255, 0.8) !important;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
+}
+
+.btn-cyber.btn-outline {
+    background: transparent;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+}
+
+.btn-cyber.btn-outline:hover {
+    background: rgba(0, 255, 255, 0.05);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+}
+
+/* ========== 14. LIQUID CURSOR TRAIL - FIXED ========== */
+.liquid-cursor-trail {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, rgba(0,255,255,0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: liquidFloat 1.8s ease-in-out infinite;
+    filter: blur(1px);
+    z-index: 9995;
+}
+
+@keyframes liquidFloat {
+    0%, 100% { 
+        transform: scale(1) translateY(0); 
+        opacity: 0.4; 
+    }
+    50% { 
+        transform: scale(1.3) translateY(-8px); 
+        opacity: 0.7; 
+    }
+}
+
+/* ========== 15. SOCIAL LINKS ENHANCEMENT - FIXED ========== */
+.social-links-hero .social-link,
+.footer .social-link {
+    background: rgba(0, 255, 255, 0.08) !important;
+    border: 2px solid rgba(0, 255, 255, 0.3) !important;
+    backdrop-filter: blur(10px);
+}
+
+.social-links-hero .social-link:hover,
+.footer .social-link:hover {
+    background: rgba(0, 255, 255, 0.15) !important;
+    border-color: rgba(0, 255, 255, 0.6) !important;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* ========== 16. CONTRAST IMPROVEMENTS ========== */
+.hero-visual {
+    filter: contrast(1.1) brightness(1.05);
+}
+
+.profile-placeholder {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 2px solid rgba(0, 255, 255, 0.2);
+}
+
+/* ========== 17. TERMINAL ENHANCEMENTS ========== */
+.terminal-window {
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+}
+
+.terminal-header {
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.8), rgba(255, 0, 255, 0.8));
+}
+
+.ui-element {
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+}
+
+/* ========== PERFORMANCE OPTIMIZATIONS ========== */
+.gpu-layer {
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* ========== MOBILE OPTIMIZATIONS ========== */
+@media (max-width: 768px) {
+    .morphing-blob,
+    .wave-distortion {
+        opacity: 0.08;
+        filter: blur(12px);
+    }
+    
+    .neon-text {
+        text-shadow: 
+            0 0 2px rgba(0, 255, 255, 0.8),
+            0 0 4px rgba(0, 255, 255, 0.3);
+        filter: brightness(0.8);
+    }
+    
+    .magnetic:hover {
+        transform: translateZ(8px);
+    }
+    
+    .tilt-card:hover {
+        transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+    }
+    
+    .glass-card {
+        background: rgba(0, 0, 0, 0.85) !important;
+        backdrop-filter: blur(15px);
+    }
+}
+
+/* ========== REDUCED MOTION ========== */
+@media (prefers-reduced-motion: reduce) {
+    .morphing-blob,
+    .floating,
+    .pulse-ring,
+    .neon-text,
+    .liquid-cursor-trail {
+        animation: none !important;
+    }
+    
+    .neon-text {
+        text-shadow: 0 0 3px rgba(0, 255, 255, 0.6);
+    }
+    
+    .btn-cyber::before {
+        display: none;
+    }
+}
+
+/* ========== HIGH CONTRAST MODE ========== */
+@media (prefers-contrast: high) {
+    .neon-text {
+        color: #ffffff !important;
+        text-shadow: 0 0 2px #00ffff;
+    }
+    
+    .glass-card {
+        background: rgba(0, 0, 0, 0.95) !important;
+        border: 2px solid #00ffff !important;
+    }
+    
+    .btn-cyber {
+        border-width: 3px !important;
+    }
+}

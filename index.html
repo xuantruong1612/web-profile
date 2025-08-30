@@ -3,62 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Tech - Full Stack Developer</title>
+    <title>Xuan Truong Tech - Full Stack Developer</title>
+    
+    <!-- ✅ CSS Files tối ưu -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/performance.css"> <!-- ✅ Thêm performance CSS -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="css/performance.css">
+    <link rel="stylesheet" href="css/ultra-effects.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Loading Screen -->
+    <!-- Loading Screen với Ultra Effects -->
     <div id="loading-screen" class="loading-screen">
         <div class="loading-container">
-            <div class="terminal-loader">
+            <div class="terminal-loader glass-card">
                 <div class="terminal-header">
-                    <span class="terminal-title">Initializing Portfolio...</span>
+                    <span class="terminal-title neon-text">Initializing Ultra Portfolio...</span>
                 </div>
                 <div class="terminal-body">
                     <div class="loading-line">$ npm start</div>
-                    <div class="loading-line">Loading modules<span class="dots">...</span></div>
-                    <div class="loading-line">Compiling components<span class="dots">...</span></div>
-                    <div class="loading-line success">✓ Portfolio ready!</div>
+                    <div class="loading-line">Loading quantum modules<span class="dots">...</span></div>
+                    <div class="loading-line">Compiling neural components<span class="dots">...</span></div>
+                    <div class="loading-line success">✓ Ultra Portfolio ready!</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Particle Background -->
-    <div id="particles-js"></div>
+    <!-- Particle Background với Energy Field -->
+    <div id="particles-js" class="energy-field"></div>
+    
+    <!-- Morphing Blobs Background -->
+    <div class="morphing-blob" style="top: 10%; left: 80%;"></div>
+    <div class="morphing-blob" style="bottom: 20%; right: 85%; animation-delay: 2s;"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <!-- Navigation với Glass Effect -->
+    <nav class="navbar glass-card" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">&lt;Alex<span class="accent">Tech</span>/&gt;</span>
+            <div class="nav-logo magnetic">
+                <span class="logo-text neon-text">&lt;Xuan Truong<span class="accent">Tech</span>/&gt;</span>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link" data-text="Home">
+                <a href="#home" class="nav-link magnetic" data-text="Home">
                     <span>01.</span>Home
                 </a>
-                <a href="#about" class="nav-link" data-text="About">
+                <a href="#about" class="nav-link magnetic" data-text="About">
                     <span>02.</span>About
                 </a>
-                <a href="#skills" class="nav-link" data-text="Skills">
+                <a href="#skills" class="nav-link magnetic" data-text="Skills">
                     <span>03.</span>Skills
                 </a>
-                <a href="#projects" class="nav-link" data-text="Projects">
+                <a href="#projects" class="nav-link magnetic" data-text="Projects">
                     <span>04.</span>Projects
                 </a>
-                <a href="#contact" class="nav-link" data-text="Contact">
+                <a href="#contact" class="nav-link magnetic" data-text="Contact">
                     <span>05.</span>Contact
                 </a>
             </div>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger magnetic" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -66,39 +73,42 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- Hero Section với Wave Distortion -->
+    <section id="home" class="hero wave-container">
         <div class="hero-bg">
             <div class="grid-overlay"></div>
+            <div class="wave-distortion"></div>
         </div>
         <div class="hero-content">
             <div class="hero-text">
                 <div class="glitch-text" data-text="Hi, I'm">Hi, I'm</div>
                 <h1 class="hero-name">
-                    <span class="text-gradient">Alex</span>
+                    <span class="text-gradient">Xuan Truong</span>
                     <span class="tech-suffix">.tech()</span>
                 </h1>
                 <div class="hero-roles">
                     <span class="role-prefix">const roles = [</span>
                     <div class="typing-container">
-                        <span class="typing-text" id="typing-text"></span>
+                        <span class="typing-text typewriter" id="typing-text"></span>
                         <span class="cursor-blink">|</span>
                     </div>
                     <span class="role-suffix">]</span>
                 </div>
                 <p class="hero-description">
                     Tôi xây dựng những trải nghiệm digital đẳng cấp thế giới với
-                    <span class="highlight">passion for innovation</span> và
-                    <span class="highlight">cutting-edge technology</span>
+                    <span class="highlight neon-text">passion for innovation</span> và
+                    <span class="highlight neon-text">cutting-edge technology</span>
                 </p>
                 <div class="hero-buttons">
-                    <button class="btn-cyber btn-primary" data-text="View Projects" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+                    <!-- ✅ Loại bỏ rainbow-border -->
+                    <button class="btn-cyber btn-primary magnetic" 
+                            onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
                         <span class="btn-content">
                             <i class="fas fa-rocket"></i>
                             View Projects
                         </span>
                     </button>
-                    <button class="btn-cyber btn-secondary" data-text="Download CV">
+                    <button class="btn-cyber btn-secondary magnetic tilt-card">
                         <span class="btn-content">
                             <i class="fas fa-download"></i>
                             Download CV
@@ -106,108 +116,107 @@
                     </button>
                 </div>
                 <div class="social-links-hero">
-                    <a href="https://github.com" target="_blank" class="social-link" data-platform="github">
+                    <a href="https://github.com" target="_blank" class="social-link magnetic pulse-dot">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com" target="_blank" class="social-link" data-platform="linkedin">
+                    <a href="https://linkedin.com" target="_blank" class="social-link magnetic pulse-dot">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://twitter.com" target="_blank" class="social-link" data-platform="twitter">
+                    <a href="https://twitter.com" target="_blank" class="social-link magnetic pulse-dot">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="hologram-container">
-                    <div class="hologram-frame">
+                <div class="hologram-container floating">
+                    <div class="hologram-frame glass-card tilt-card energy-field">
                         <div class="profile-hologram">
-                            <!-- ✅ Profile placeholder -->
                             <div class="profile-placeholder">
-                                <i class="fas fa-user-astronaut"></i>
+                                <i class="fas fa-user-astronaut neon-text"></i>
                             </div>
                             <div class="hologram-glitch"></div>
                         </div>
                         <div class="hologram-ui">
                             <div class="ui-element ui-top">
-                                <span class="status-dot"></span>
-                                <span>ONLINE</span>
+                                <span class="status-dot pulse-ring"></span>
+                                <span class="neon-text">ONLINE</span>
                             </div>
                             <div class="ui-element ui-bottom">
-                                <div class="code-line">&gt; alex.getCurrentStatus()</div>
-                                <div class="code-output">"Coding amazing things"</div>
+                                <div class="code-line">&gt; xuantruong.getCurrentStatus()</div>
+                                <div class="code-output neon-text">"Coding amazing things"</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
+        <div class="scroll-indicator floating">
             <div class="scroll-text">Scroll to explore</div>
             <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section với Glass Cards -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-number">01</span>
+                <span class="section-number neon-text">01</span>
                 <h2 class="section-title">About<span class="accent">.me</span></h2>
                 <div class="title-line"></div>
             </div>
             
             <div class="about-content">
                 <div class="about-text">
-                    <div class="terminal-window">
+                    <div class="terminal-window glass-card tilt-card">
                         <div class="terminal-header">
                             <div class="terminal-controls">
-                                <span class="control close"></span>
-                                <span class="control minimize"></span>
-                                <span class="control maximize"></span>
+                                <span class="control close pulse-dot"></span>
+                                <span class="control minimize pulse-dot"></span>
+                                <span class="control maximize pulse-dot"></span>
                             </div>
-                            <span class="terminal-title">about_me.js</span>
+                            <span class="terminal-title neon-text">about_me.js</span>
                         </div>
                         <div class="terminal-content">
                             <pre><code><span class="code-comment">// Passionate Full Stack Developer</span>
-<span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
-    <span class="code-property">name</span>: <span class="code-string">"Alex Tech"</span>,
-    <span class="code-property">experience</span>: <span class="code-number">5</span> + <span class="code-string">" years"</span>,
+<span class="code-keyword">const</span> <span class="code-variable neon-text">developer</span> = {
+    <span class="code-property">name</span>: <span class="code-string">"Xuan Truong Tech"</span>,
+    <span class="code-property">experience</span>: <span class="code-number neon-text">5</span> + <span class="code-string">" years"</span>,
     <span class="code-property">location</span>: <span class="code-string">"Hà Nội, Vietnam"</span>,
     <span class="code-property">focus</span>: [
         <span class="code-string">"Modern Web Development"</span>,
         <span class="code-string">"System Architecture"</span>,
         <span class="code-string">"DevOps & Cloud"</span>
     ],
-    <span class="code-property">passion</span>: <span class="code-string">"Creating digital masterpieces"</span>
+    <span class="code-property">passion</span>: <span class="code-string neon-text">"Creating digital masterpieces"</span>
 };</code></pre>
                         </div>
                     </div>
                     
                     <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <i class="fas fa-project-diagram"></i>
+                        <div class="stat-card glass-card magnetic tilt-card energy-field">
+                            <div class="stat-icon pulse-dot">
+                                <i class="fas fa-project-diagram neon-text"></i>
                             </div>
                             <div class="stat-info">
-                                <span class="stat-number" data-target="150">0</span>
+                                <span class="stat-number neon-text" data-target="150">0</span>
                                 <span class="stat-label">Projects Completed</span>
                             </div>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <i class="fas fa-code"></i>
+                        <div class="stat-card glass-card magnetic tilt-card energy-field">
+                            <div class="stat-icon pulse-dot">
+                                <i class="fas fa-code neon-text"></i>
                             </div>
                             <div class="stat-info">
-                                <span class="stat-number" data-target="500000">0</span>
+                                <span class="stat-number neon-text" data-target="500000">0</span>
                                 <span class="stat-label">Lines of Code</span>
                             </div>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <i class="fas fa-coffee"></i>
+                        <div class="stat-card glass-card magnetic tilt-card energy-field">
+                            <div class="stat-icon pulse-dot">
+                                <i class="fas fa-coffee neon-text"></i>
                             </div>
                             <div class="stat-info">
-                                <span class="stat-number" data-target="9999">0</span>
+                                <span class="stat-number neon-text" data-target="9999">0</span>
                                 <span class="stat-label">Coffee Consumed</span>
                             </div>
                         </div>
@@ -217,46 +226,47 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills Section với Magnetic Cards -->
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <span class="section-number">02</span>
+                <span class="section-number neon-text">02</span>
                 <h2 class="section-title">Tech<span class="accent">.stack</span></h2>
                 <div class="title-line"></div>
             </div>
             
             <div class="skills-container">
                 <div class="skill-categories">
-                    <button class="category-btn active" data-category="all">All Tech</button>
-                    <button class="category-btn" data-category="frontend">Frontend</button>
-                    <button class="category-btn" data-category="backend">Backend</button>
-                    <button class="category-btn" data-category="devops">DevOps</button>
-                    <button class="category-btn" data-category="tools">Tools</button>
+                    <button class="category-btn active glass-card magnetic" data-category="all">All Tech</button>
+                    <button class="category-btn glass-card magnetic" data-category="frontend">Frontend</button>
+                    <button class="category-btn glass-card magnetic" data-category="backend">Backend</button>
+                    <button class="category-btn glass-card magnetic" data-category="devops">DevOps</button>
+                    <button class="category-btn glass-card magnetic" data-category="tools">Tools</button>
                 </div>
                 
                 <div class="skills-grid" id="skills-grid">
-                    <!-- Skills will be generated by JavaScript -->
+                    <!-- Skills will be generated by JavaScript với ultra effects -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section với 3D Tilt Cards -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <span class="section-number">03</span>
+                <span class="section-number neon-text">03</span>
                 <h2 class="section-title">Featured<span class="accent">.work</span></h2>
                 <div class="title-line"></div>
             </div>
             
             <div class="projects-grid" id="projects-grid">
-                <!-- Projects will be generated by JavaScript -->
+                <!-- Projects will be generated by JavaScript với ultra effects -->
             </div>
             
             <div class="view-more-container">
-                <button class="btn-cyber btn-outline" data-text="View All Projects">
+                <!-- ✅ Loại bỏ rainbow-border -->
+                <button class="btn-cyber btn-outline magnetic">
                     <span class="btn-content">
                         <i class="fab fa-github"></i>
                         View All Projects
@@ -266,41 +276,41 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section với Glass Form -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-number">04</span>
+                <span class="section-number neon-text">04</span>
                 <h2 class="section-title">Get<span class="accent">.inTouch</span></h2>
                 <div class="title-line"></div>
             </div>
             
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-card">
+                    <div class="contact-card glass-card tilt-card energy-field">
                         <div class="card-header">
-                            <i class="fas fa-terminal"></i>
+                            <i class="fas fa-terminal neon-text pulse-dot"></i>
                             <h3>Let's Build Something Amazing</h3>
                         </div>
                         <p>Có một ý tưởng tuyệt vời? Hãy cùng biến nó thành hiện thực!</p>
                         
                         <div class="contact-methods">
-                            <div class="contact-method">
-                                <i class="fas fa-envelope"></i>
+                            <div class="contact-method magnetic glass-card">
+                                <i class="fas fa-envelope neon-text"></i>
                                 <div>
                                     <span class="method-label">Email</span>
-                                    <span class="method-value">alex.tech@example.com</span>
+                                    <span class="method-value">xuantruong.tech@example.com</span>
                                 </div>
                             </div>
-                            <div class="contact-method">
-                                <i class="fas fa-phone"></i>
+                            <div class="contact-method magnetic glass-card">
+                                <i class="fas fa-phone neon-text"></i>
                                 <div>
                                     <span class="method-label">Phone</span>
                                     <span class="method-value">+84 123 456 789</span>
                                 </div>
                             </div>
-                            <div class="contact-method">
-                                <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-method magnetic glass-card">
+                                <i class="fas fa-map-marker-alt neon-text"></i>
                                 <div>
                                     <span class="method-label">Location</span>
                                     <span class="method-value">Hà Nội, Vietnam</span>
@@ -311,34 +321,36 @@
                 </div>
                 
                 <div class="contact-form-container">
-                    <form class="cyber-form" id="contact-form">
+                    <form class="cyber-form glass-card tilt-card" id="contact-form">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" required>
-                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required class="glass-card">
+                            <label for="name" class="neon-text">Your Name</label>
+                            <!-- ✅ Loại bỏ rainbow-border -->
                             <span class="input-border"></span>
                         </div>
                         
                         <div class="form-group">
-                            <input type="email" id="email" name="email" required>
-                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required class="glass-card">
+                            <label for="email" class="neon-text">Email Address</label>
                             <span class="input-border"></span>
                         </div>
                         
                         <div class="form-group">
-                            <input type="text" id="subject" name="subject" required>
-                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required class="glass-card">
+                            <label for="subject" class="neon-text">Subject</label>
                             <span class="input-border"></span>
                         </div>
                         
                         <div class="form-group">
-                            <textarea id="message" name="message" required></textarea>
-                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required class="glass-card"></textarea>
+                            <label for="message" class="neon-text">Message</label>
                             <span class="input-border"></span>
                         </div>
                         
-                        <button type="submit" class="btn-cyber btn-primary" data-text="Send Message">
+                        <!-- ✅ Loại bỏ rainbow-border -->
+                        <button type="submit" class="btn-cyber btn-primary magnetic">
                             <span class="btn-content">
-                                <i class="fas fa-paper-plane"></i>
+                                <i class="fas fa-paper-plane pulse-dot"></i>
                                 Send Message
                             </span>
                         </button>
@@ -348,44 +360,45 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Footer với Neon Effects -->
+    <footer class="footer glass-card">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-left">
-                    <div class="footer-logo">
-                        <span class="logo-text">&lt;Alex<span class="accent">Tech</span>/&gt;</span>
+                    <div class="footer-logo magnetic">
+                        <span class="logo-text neon-text">&lt;Xuan Truong<span class="accent">Tech</span>/&gt;</span>
                     </div>
-                    <p>Crafted with ❤️ and lots of ☕ by Alex Tech</p>
+                    <p>Crafted with ❤️ and lots of ☕ by <span class="neon-text">Xuan Truong Tech</span></p>
                 </div>
                 <div class="footer-right">
                     <div class="social-links">
-                        <a href="https://github.com" target="_blank" class="social-link" data-platform="github">
-                            <i class="fab fa-github"></i>
+                        <a href="https://github.com" target="_blank" class="social-link magnetic pulse-dot">
+                            <i class="fab fa-github neon-text"></i>
                         </a>
-                        <a href="https://linkedin.com" target="_blank" class="social-link" data-platform="linkedin">
-                            <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com" target="_blank" class="social-link magnetic pulse-dot">
+                            <i class="fab fa-linkedin neon-text"></i>
                         </a>
-                        <a href="https://twitter.com" target="_blank" class="social-link" data-platform="twitter">
-                            <i class="fab fa-twitter"></i>
+                        <a href="https://twitter.com" target="_blank" class="social-link magnetic pulse-dot">
+                            <i class="fab fa-twitter neon-text"></i>
                         </a>
-                        <a href="https://discord.com" target="_blank" class="social-link" data-platform="discord">
-                            <i class="fab fa-discord"></i>
+                        <a href="https://discord.com" target="_blank" class="social-link magnetic pulse-dot">
+                            <i class="fab fa-discord neon-text"></i>
                         </a>
                     </div>
-                    <p>&copy; 2025 Alex Tech. All rights reserved.</p>
+                    <p>&copy; 2025 <span class="neon-text">Xuan Truong Tech</span>. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- ✅ Scripts tối ưu -->
+    <!-- ✅ Scripts Fixed -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/data.js"></script>
     <script src="js/components.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/particles.js"></script> <!-- ✅ Particles tối ưu -->
-    <script src="js/optimized-cursor.js"></script> <!-- ✅ Con chuột mới đẹp -->
-    <script src="js/main.js"></script> <!-- ✅ Main script tối ưu -->
+    <script src="js/animations.js"></script> <!-- ✅ FIXED -->
+    <script src="js/particles.js"></script>
+    <script src="js/optimized-cursor.js"></script>
+    <script src="js/ultra-effects.js"></script>
+    <script src="js/main.js"></script> <!-- ✅ FIXED -->
 </body>
 </html>

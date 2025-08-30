@@ -223,7 +223,7 @@ const projectsData = [
         image: "fas fa-shopping-cart",
         technologies: ["React", "Node.js", "GraphQL", "PostgreSQL", "Stripe", "Socket.io", "TensorFlow"],
         demoLink: "https://cybershop-demo.com",
-        codeLink: "https://github.com/alextech/cybershop",
+        codeLink: "https://github.com/xuantruong1612/cybershop",
         featured: true,
         status: "Live",
         difficulty: 5,
@@ -244,7 +244,7 @@ const projectsData = [
         image: "fas fa-brain",
         technologies: ["Three.js", "Python", "TensorFlow", "WebGL", "D3.js", "FastAPI"],
         demoLink: "https://neural-viz.com",
-        codeLink: "https://github.com/alextech/neural-viz",
+        codeLink: "https://github.com/xuantruong1612/neural-viz",
         featured: true,
         status: "Live",
         difficulty: 5,
@@ -265,7 +265,7 @@ const projectsData = [
         image: "fas fa-cloud",
         technologies: ["Vue.js", "Express", "Redis", "Docker", "Kubernetes", "AWS", "Grafana"],
         demoLink: "https://cloudops-dashboard.com",
-        codeLink: "https://github.com/alextech/cloudops",
+        codeLink: "https://github.com/xuantruong1612/cloudops",
         featured: true,
         status: "Beta",
         difficulty: 5,
@@ -286,7 +286,7 @@ const projectsData = [
         image: "fas fa-robot",
         technologies: ["TypeScript", "OpenAI API", "VS Code API", "Python", "Machine Learning"],
         demoLink: "https://marketplace.visualstudio.com/ai-assistant",
-        codeLink: "https://github.com/alextech/ai-code-assistant",
+        codeLink: "https://github.com/xuantruong1612/ai-code-assistant",
         featured: false,
         status: "Published",
         difficulty: 4,
@@ -307,7 +307,7 @@ const projectsData = [
         image: "fas fa-vote-yea",
         technologies: ["Solidity", "Web3.js", "React", "IPFS", "MetaMask", "Ethereum"],
         demoLink: "https://crypto-vote.com",
-        codeLink: "https://github.com/alextech/blockchain-voting",
+        codeLink: "https://github.com/xuantruong1612/blockchain-voting",
         featured: false,
         status: "Development",
         difficulty: 5,
@@ -328,7 +328,7 @@ const projectsData = [
         image: "fas fa-vr-cardboard",
         technologies: ["A-Frame", "WebXR", "Three.js", "Blender", "WebGL", "JavaScript"],
         demoLink: "https://ar-portfolio.com",
-        codeLink: "https://github.com/alextech/ar-portfolio",
+        codeLink: "https://github.com/xuantruong1612/ar-portfolio",
         featured: false,
         status: "Experimental",
         difficulty: 4,
@@ -357,13 +357,13 @@ const typingRoles = [
 
 // ========== CONTACT INFO ========== //
 const contactInfo = {
-    email: "alex.tech@example.com",
+    email: "xuantruong.tech@example.com",
     phone: "+84 123 456 789",
     location: "Hà Nội, Vietnam",
-    linkedin: "https://linkedin.com/in/alextech",
-    github: "https://github.com/alextech",
-    twitter: "https://twitter.com/alextech",
-    discord: "alextech#1234"
+    linkedin: "https://linkedin.com/in/xuantruong",
+    github: "https://github.com/xuantruong1612",
+    twitter: "https://twitter.com/xuantruong",
+    discord: "xuantruong#1234"
 };
 
 // ========== CONFIG ========== //

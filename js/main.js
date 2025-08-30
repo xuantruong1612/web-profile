@@ -1,11 +1,20 @@
-// ========== OPTIMIZED MAIN APPLICATION ========== //
+// ========== OPTIMIZED MAIN APPLICATION - FIXED ========== //
 class OptimizedPortfolioApp {
     constructor() {
         this.isLoaded = false;
         this.typingAnimation = null;
         this.performanceMode = this.detectPerformance();
         
+        // ✅ Bind methods first
+        this.bindMethods();
         this.init();
+    }
+    
+    // ✅ Add method binding
+    bindMethods() {
+        this.onScroll = this.onScroll.bind(this);
+        this.onResize = this.onResize.bind(this);
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
     }
     
     init() {
@@ -106,32 +115,30 @@ class OptimizedPortfolioApp {
         }
     }
     
+    // ✅ FIXED initEventListeners method
     initEventListeners() {
         this.initMobileMenu();
         this.initSkillFilters();
         this.initContactForm();
         this.initSmoothScroll();
         
-        // Optimized window events with throttling
-        window.addEventListener('scroll', this.throttle(this.onScroll.bind(this), 16));
-        window.addEventListener('resize', this.throttle(this.onResize.bind(this), 100));
+        // ✅ Use properly bound methods with throttling
+        const throttle = (func, limit) => {
+            let inThrottle;
+            return (...args) => {
+                if (!inThrottle) {
+                    func.apply(this, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            };
+        };
+
+        window.addEventListener('scroll', throttle(this.onScroll, 16));
+        window.addEventListener('resize', throttle(this.onResize, 100));
         
         // Keyboard shortcuts
         this.initKeyboardShortcuts();
-    }
-    
-    // Performance-optimized throttle function
-    throttle(func, limit) {
-        let inThrottle;
-        return function() {
-            const args = arguments;
-            const context = this;
-            if (!inThrottle) {
-                func.apply(context, args);
-                inThrottle = true;
-                setTimeout(() => inThrottle = false, limit);
-            }
-        }
     }
     
     initMobileMenu() {
@@ -200,7 +207,7 @@ class OptimizedPortfolioApp {
         const form = document.getElementById('contact-form');
         
         if (form) {
-            form.addEventListener('submit', this.handleFormSubmit.bind(this));
+            form.addEventListener('submit', this.handleFormSubmit);
             
             // Real-time validation
             const inputs = form.querySelectorAll('input, textarea');
@@ -692,6 +699,7 @@ class OptimizedPortfolioApp {
         this.announce(message);
     }
     
+    // ✅ Fixed onResize method
     onResize() {
         // Handle responsive behavior
         const navMenu = document.getElementById('nav-menu');
@@ -716,6 +724,12 @@ class OptimizedPortfolioApp {
                 window.pJSDom[0].pJS.fn.particlesRefresh();
             }
         }
+    }
+    
+    // ✅ Fixed onScroll method
+    onScroll() {
+        // Scroll handling is done in initNavbarEffects
+        // This method can be used for other scroll-based functionality
     }
 }
 
@@ -758,4 +772,4 @@ if (typeof window !== 'undefined') {
     });
 }
 
-console.log('🚀 Optimized Portfolio Application loaded successfully!');
+console.log('🚀 Optimized Portfolio Application loaded successfully - FIXED!');
